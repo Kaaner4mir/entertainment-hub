@@ -1,13 +1,14 @@
-﻿using EntertainmentHub.Entities;
+﻿using EntertainmentHub.DataAccess.Abstract;
+using EntertainmentHub.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntertainmentHub.DataAccess.Concrete
+namespace EntertainmentHub.DataAccess.Concrete.EntityFramework
 {
-    public class ProductionDal
+    public class EFProductionDal:IProductionDal
     {
         public List<Production> GetProductions()
         {

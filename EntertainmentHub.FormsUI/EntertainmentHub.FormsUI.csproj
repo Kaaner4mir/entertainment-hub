@@ -95,6 +95,10 @@
       <Project>{7d1e7959-c3ef-4ed6-97b9-fe7a6d7ea268}</Project>
       <Name>EntertainmentHub.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EntertainmentHub.DataAccess\EntertainmentHub.DataAccess.csproj">
+      <Project>{1355F565-D5DA-42E6-972B-3C3098D732F7}</Project>
+      <Name>EntertainmentHub.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntertainmentHub.Entities\EntertainmentHub.Entities.csproj">
       <Project>{DD58C79B-F471-41A5-A67E-6A937F93A4C6}</Project>
       <Name>EntertainmentHub.Entities</Name>

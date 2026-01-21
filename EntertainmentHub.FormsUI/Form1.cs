@@ -1,4 +1,7 @@
-﻿using EntertainmentHub.Business.Concrete;
+﻿using EntertainmentHub.Business.Abstract;
+using EntertainmentHub.Business.Concrete;
+using EntertainmentHub.DataAccess.Abstract;
+using EntertainmentHub.DataAccess.Concrete.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,15 +24,18 @@ namespace EntertainmentHub.FormsUI
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
+        IProductionService _productionService;
+
         public main_form()
         {
             InitializeComponent();
+            _productionService = new ProductionManager(new EFProductionDal());
         }
 
         private void main_form_Load(object sender, EventArgs e)
         {
-            EntertainmentHubManager manager = new EntertainmentHubManager();
-            dgw_productions.DataSource = manager.GetAllProductions();
+
+            dgw_productions.DataSource = _productionService.GetAllProductions();
 
             dgw_productions.Columns[0].HeaderText = "Production ID";
             dgw_productions.Columns[1].HeaderText = "Production Name";

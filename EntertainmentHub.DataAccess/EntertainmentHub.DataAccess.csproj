@@ -51,14 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrete\EntertainmentHubContext.cs" />
-    <Compile Include="Concrete\ProductionDal.cs" />
+    <Compile Include="Abstract\IEntityRepository.cs" />
+    <Compile Include="Abstract\IProductionDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EntertainmentHubContext.cs" />
+    <Compile Include="Concrete\EntityFramework\EFProductionDal.cs" />
+    <Compile Include="Concrete\NHibernate\NHProductionDal.cs" />
     <Compile Include="Mappings\ProductionMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\EntertainmentHub.Entities\EntertainmentHub.Entities.csproj">
       <Project>{DD58C79B-F471-41A5-A67E-6A937F93A4C6}</Project>

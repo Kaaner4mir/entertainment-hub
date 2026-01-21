@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntertainmentHub.DataAccess.Concrete
+namespace EntertainmentHub.DataAccess.Concrete.EntityFramework
 {
     public class EntertainmentHubContext: DbContext
     {

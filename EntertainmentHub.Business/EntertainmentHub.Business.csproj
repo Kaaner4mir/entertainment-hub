@@ -41,12 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrete\EntertainmentHubManager.cs" />
+    <Compile Include="Abstract\IProductionService.cs" />
+    <Compile Include="Concrete\ProductionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\EntertainmentHub.DataAccess\EntertainmentHub.DataAccess.csproj">
       <Project>{1355f565-d5da-42e6-972b-3c3098d732f7}</Project>
