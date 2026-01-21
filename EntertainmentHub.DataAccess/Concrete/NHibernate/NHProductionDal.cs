@@ -3,6 +3,7 @@ using EntertainmentHub.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,7 +26,12 @@ namespace EntertainmentHub.DataAccess.Concrete.NHibernate
             throw new NotImplementedException();
         }
 
-        public List<Production> GetProductions()
+        public Production GetProduction(Expression<Func<Production, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Production> GetProductions(Expression<Func<Production, bool>> filter = null)
         {
             List<Production> productions = new List<Production>
             {

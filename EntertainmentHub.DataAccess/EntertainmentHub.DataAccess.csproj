@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\IProductionDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EFEntityRepositoryBase.cs" />
     <Compile Include="Concrete\EntityFramework\EntertainmentHubContext.cs" />
     <Compile Include="Concrete\EntityFramework\EFProductionDal.cs" />
     <Compile Include="Concrete\NHibernate\NHProductionDal.cs" />
