@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7D1E7959-C3EF-4ED6-97B9-FE7A6D7EA268}</ProjectGuid>
+    <ProjectGuid>{DD58C79B-F471-41A5-A67E-6A937F93A4C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EntertainmentHub.Business</RootNamespace>
-    <AssemblyName>EntertainmentHub.Business</AssemblyName>
+    <RootNamespace>EntertainmentHub.Entities</RootNamespace>
+    <AssemblyName>EntertainmentHub.Entities</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Production.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

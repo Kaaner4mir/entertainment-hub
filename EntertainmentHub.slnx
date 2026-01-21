@@ -1,1 +1,6 @@
-<Solution />
+<Solution>
+  <Project Path="EntertainmentHub.Business/EntertainmentHub.Business.csproj" />
+  <Project Path="EntertainmentHub.DataAccess/EntertainmentHub.DataAccess.csproj" />
+  <Project Path="EntertainmentHub.Entities/EntertainmentHub.Entities.csproj" />
+  <Project Path="EntertainmentHub.FormsUI/EntertainmentHub.FormsUI.csproj" />
+</Solution>
