@@ -70,7 +70,22 @@ namespace EntertainmentHub.FormsUI
 
         private void button_minimize_Click(object sender, EventArgs e)
         {
-            WindowState=FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void SearchProductions()
+        {
+            dgw_productions.DataSource = _productionService.GetProductions(textBox_name.Text, textBox_category.Text);
+        }
+
+        private void textBox_name_TextChanged(object sender, EventArgs e)
+        {
+            SearchProductions();
+        }
+
+        private void textBox_category_TextChanged(object sender, EventArgs e)
+        {
+            SearchProductions();
         }
     }
 }

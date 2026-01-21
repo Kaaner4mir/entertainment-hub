@@ -16,7 +16,16 @@ namespace EntertainmentHub.FormsUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main_form());
+            try
+            {
+                Application.Run(new main_form());
+            }
+            catch (Exception ex)
+            {
+                string message = $"Error: {ex.Message}\nInner Exception: {ex.InnerException?.Message}\nStack Trace: {ex.StackTrace}";
+                System.IO.File.WriteAllText("error_log.txt", message);
+                MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

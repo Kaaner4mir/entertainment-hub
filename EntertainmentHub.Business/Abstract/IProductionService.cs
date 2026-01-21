@@ -10,5 +10,8 @@ namespace EntertainmentHub.Business.Abstract
     public interface IProductionService
     {
         List<Production> GetAllProductions();
+        List<Production> GetProductionByName(string productionName);
+        List<Production> GetProductionByCategory(string productionCategory);
+        List<Production> GetProductions(string productionName, string productionCategory);
     }
 }
