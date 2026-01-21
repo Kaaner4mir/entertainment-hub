@@ -13,6 +13,14 @@ namespace EntertainmentHub.FormsUI
 {
     public partial class main_form : Form
     {
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         public main_form()
         {
             InitializeComponent();
@@ -20,7 +28,7 @@ namespace EntertainmentHub.FormsUI
 
         private void main_form_Load(object sender, EventArgs e)
         {
-            EntertainmentHubManager manager= new EntertainmentHubManager();
+            EntertainmentHubManager manager = new EntertainmentHubManager();
             dgw_productions.DataSource = manager.GetAllProductions();
 
             dgw_productions.Columns[0].HeaderText = "Production ID";
@@ -30,6 +38,33 @@ namespace EntertainmentHub.FormsUI
             dgw_productions.Columns[4].HeaderText = "In Theater";
             dgw_productions.Columns[5].HeaderText = "Production Year";
             dgw_productions.Columns[6].HeaderText = "Director ID";
+        }
+
+        private void panel_titlebar_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void button_crossmark_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button_restore_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void button_minimize_Click(object sender, EventArgs e)
+        {
+            WindowState=FormWindowState.Minimized;
         }
     }
 }
