@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="EntertainmentHub.Business/EntertainmentHub.Business.csproj" />
-  <Project Path="EntertainmentHub.DataAccess/EntertainmentHub.DataAccess.csproj" />
-  <Project Path="EntertainmentHub.Entities/EntertainmentHub.Entities.csproj" />
-  <Project Path="EntertainmentHub.FormsUI/EntertainmentHub.FormsUI.csproj" />
+  <Project Path="EntertainmentHub.Business/EntertainmentHub.Business.csproj" Id="7d1e7959-c3ef-4ed6-97b9-fe7a6d7ea268" />
+  <Project Path="EntertainmentHub.DataAccess/EntertainmentHub.DataAccess.csproj" Id="1355f565-d5da-42e6-972b-3c3098d732f7" />
+  <Project Path="EntertainmentHub.Entities/EntertainmentHub.Entities.csproj" Id="dd58c79b-f471-41a5-a67e-6a937f93a4c6" />
+  <Project Path="EntertainmentHub.FormsUI/EntertainmentHub.FormsUI.csproj" Id="36fa1119-4866-4924-9bb9-f0b34e53fce3" />
 </Solution>

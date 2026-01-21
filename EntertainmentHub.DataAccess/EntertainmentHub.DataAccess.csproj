@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Concrete\EntertainmentHubContext.cs" />
     <Compile Include="Concrete\ProductionDal.cs" />
+    <Compile Include="Mappings\ProductionMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

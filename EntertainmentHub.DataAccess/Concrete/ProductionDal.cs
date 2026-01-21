@@ -11,8 +11,8 @@ namespace EntertainmentHub.DataAccess.Concrete
     {
         public List<Production> GetProductions()
         {
-            using (EntertainmentHubContext context= new EntertainmentHubContext()) 
-            { 
+            using (EntertainmentHubContext context = new EntertainmentHubContext())
+            {
                 return context.Productions.ToList();
             }
         }
@@ -21,7 +21,7 @@ namespace EntertainmentHub.DataAccess.Concrete
         {
             using (EntertainmentHubContext context = new EntertainmentHubContext())
             {
-                return context.Productions.SingleOrDefault(x=>x.ProductionID==id);
+                return context.Productions.SingleOrDefault(x => x.ProductionID == id);
             }
         }
 
@@ -43,4 +43,5 @@ namespace EntertainmentHub.DataAccess.Concrete
         {
 
         }
+    }
 }

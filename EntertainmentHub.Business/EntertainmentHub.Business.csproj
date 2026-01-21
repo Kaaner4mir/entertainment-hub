@@ -41,12 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Concrete\EntertainmentHubManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntertainmentHub.DataAccess\EntertainmentHub.DataAccess.csproj">
+      <Project>{1355f565-d5da-42e6-972b-3c3098d732f7}</Project>
+      <Name>EntertainmentHub.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntertainmentHub.Entities\EntertainmentHub.Entities.csproj">
+      <Project>{DD58C79B-F471-41A5-A67E-6A937F93A4C6}</Project>
+      <Name>EntertainmentHub.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

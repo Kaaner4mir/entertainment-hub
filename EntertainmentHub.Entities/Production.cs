@@ -11,8 +11,9 @@ namespace EntertainmentHub.Entities
         public int ProductionID { get; set; }
         public string ProductionName { get; set; }
         public string ProductionCategory { get; set; }
-        public float ProductionRuntime { get; set; }
+        public decimal ProductionRuntime { get; set; }
         public int inTheaters { get; set; }
+        public int ProductionYear { get; set; }
         public int DirectorID { get; set; }
     }
 }
