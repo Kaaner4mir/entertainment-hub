@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EntertainmentHub.Business.Concrete
 {
-    public class ProductionManager:IProductionService
+    public class ProductionManager : IProductionService
     {
         private IProductionDal _productionDal;
 
@@ -36,9 +36,24 @@ namespace EntertainmentHub.Business.Concrete
 
         public List<Production> GetProductions(string productionName, string productionCategory)
         {
-            return _productionDal.GetProductions(p => 
+            return _productionDal.GetProductions(p =>
                 (string.IsNullOrEmpty(productionName) || p.ProductionName.ToLower().Contains(productionName.ToLower())) &&
                 (string.IsNullOrEmpty(productionCategory) || p.ProductionCategory.ToLower().Contains(productionCategory.ToLower())));
+        }
+
+        public void AddProduction(Production production)
+        {
+            _productionDal.AddProduction(production);
+        }
+
+        public void UpdateProduction(Production production)
+        {
+            _productionDal.UpdateProduction(production);
+        }
+
+        public void DeleteProduction(Production production)
+        {
+            _productionDal.DeleteProduction(production);
         }
     }
 }

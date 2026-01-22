@@ -13,5 +13,8 @@ namespace EntertainmentHub.Business.Abstract
         List<Production> GetProductionByName(string productionName);
         List<Production> GetProductionByCategory(string productionCategory);
         List<Production> GetProductions(string productionName, string productionCategory);
+        void AddProduction(Production production);
+        void UpdateProduction(Production production);
+        void DeleteProduction(Production production);
     }
 }

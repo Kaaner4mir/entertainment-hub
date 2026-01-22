@@ -120,6 +120,12 @@
       <Name>EntertainmentHub.Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Items\Add.png" />
+    <Content Include="Items\Clear.png" />
+    <Content Include="Items\Delete.png" />
+    <Content Include="Items\Update.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
